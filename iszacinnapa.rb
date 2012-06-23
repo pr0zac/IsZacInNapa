@@ -24,11 +24,11 @@ get '/' do
     end
 
     if in_napa
-      'Yes'
+      '<html><center><h1>Yes</h1></center></html>'
     else
-      'No'
+      '<html><center><h1>No</h1></center></html>'
     end
   rescue
-    'Not sure'
+    '<html><center><h1>No clue</h1></center></html>'
   end
 end
