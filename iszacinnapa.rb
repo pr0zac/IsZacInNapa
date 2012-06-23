@@ -4,7 +4,7 @@ require './rosumi.rb'
 
 get '/' do
   begin
-    rosumi = Rosumi.new('zacmorris@gmail.com', 'sh3llc0de')
+    rosumi = Rosumi.new(ENV['ROSUMI_UNAME'], ENV['ROSUMI_PWD'])
     locate_info = rosumi.locate(1)
 
     lat = locate_info[:latitude]
